@@ -1,11 +1,9 @@
-import express,{Application, Request, Response} from 'express'
+import express, { Application, Request, Response } from 'express';
 
-const app:Application  = express()
+const app: Application = express();
 
-app.use(express.json())
+app.use(express.json());
 
-app.get('/', (req:Request, res:Response):Response => {
-  return res.json({ message: 'Hello Typescript'})
-})
+app.get('/', (req: Request, res: Response): Response => res.json({ message: 'Hello Typescript' }));
 
-app.listen(3333, ()=>{console.log('Server Running')})
+app.listen(3333, () => { console.log('Server Running'); });
