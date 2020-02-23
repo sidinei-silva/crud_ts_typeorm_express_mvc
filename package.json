@@ -8,5 +8,8 @@
     "@types/node": "^13.7.4",
     "ts-node": "^8.6.2",
     "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
