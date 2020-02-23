@@ -4,6 +4,7 @@ module.exports = {
     node: true,
   },
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
   ],
   globals: {
