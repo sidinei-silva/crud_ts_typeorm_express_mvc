@@ -1,0 +1,23 @@
+{
+  "name": "hello_type",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sidinei Silva <sidinei.silva02@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start:production": "node dist/app.js",
+    "start:development": "nodemon src/app.ts",
+    "build": "ts -p ."
+
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.7.4",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
