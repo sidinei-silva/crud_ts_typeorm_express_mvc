@@ -1,15 +1,24 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import cors from 'cors';
+import routes from './routes';
 
-const app = express();
+class App {
+  public express: express.Application;
 
-app.use(express.json());
+  constructor() {
+    this.express = express();
+    this.middlewares();
+    this.routes();
+  }
 
-app.get(
-  '/',
-  (req: Request, res: Response): Response =>
-    res.json({ message: 'Hello Typescript' }),
-);
+  private middlewares(): void {
+    this.express.use(express.json());
+    this.express.use(cors());
+  }
 
-app.listen(3333, () => {
-  console.log('Server Running');
-});
+  private routes(): void {
+    this.express.use(routes);
+  }
+}
+
+export default new App().express;
