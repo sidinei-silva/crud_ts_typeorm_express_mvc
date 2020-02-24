@@ -1,8 +1,12 @@
 import { Request, Response } from 'express';
+import { getCustomRepository } from 'typeorm';
+import { UserRepository } from '../models/UserRepository';
 
 class UserController {
   index(req: Request, res: Response): Response {
-    return res.json({ message: 'hello user' });
+    const User = getCustomRepository(UserRepository);
+    const users = User.find();
+    return res.json(users);
   }
 }
 
